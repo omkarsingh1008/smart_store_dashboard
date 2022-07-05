@@ -1,0 +1,189 @@
+:root{
+    --form-bg-color: #F9F9F9;
+    --form-input-bg: rgba(0, 150, 150, 0.1);
+    --form-button-color: #010a0a;
+    --unseen-button-color: rgba(222, 199, 71, 0.1);
+    --seen-button-color: rgba(255, 255, 255, 0.1);
+    --page-border-color: #aad19d;
+    --alert-font-color: black;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    /* height:100%; */
+}
+
+/* login form css */
+.form{
+    position: relative;
+    z-index: 1;
+    background: var(--form-bg-color);
+    opacity: 99%;
+    max-width: 490px;
+    text-align: center;
+    margin: 150px auto 5px;
+    padding: 10px 45px 48px 45px;
+    border-radius: 8px;
+    margin-left: 46rem!important;
+}
+
+.form p{
+    font-size: 32px;
+    padding: 1px;
+}
+
+.form input{
+    outline: 0;
+    border-radius: 6px;
+    background: var(--form-input-bg);
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button{
+    outline: 0;
+    border-radius: 6px;
+    background: var(--form-button-color);
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+/* dashboard page */
+
+.inner{
+    overflow-y: auto;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.vertical {
+  width: 1px;
+  background-color: grey;
+  height: 30px;
+  margin-right: 1px;
+}
+
+.dashboard {
+    border: 16px solid var(--page-border-color);
+    margin: 0;
+    height: 100%;
+    /* max-height: 150%; */
+    width: 100%;
+    position: absolute;   
+    overflow: hidden;
+  
+}
+
+.dropdown-menu{
+    min-width: 106px!important;
+}
+
+.alert_border{
+    border-left: 4px solid var(--page-border-color);
+    margin-right: 10px;
+}
+
+.dropdown a:hover {
+    text-decoration: none;
+}
+
+.all_button {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom-color: aliceblue;
+    background: azure; 
+}
+
+.all_button::after{
+    margin-left: 2.255em;
+}
+
+.dashbord_btn{
+    outline: 0;
+    border-radius: 5px;
+    width: 97%;
+    border: 0;
+    margin: 0 15px 15px;
+    padding: 6px;
+    color: var(--alert-font-color);
+    font-size: 16px;
+    border-left: 5px solid var(--form-button-color);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard_seen {
+    background: var(--unseen-button-color); 
+}
+
+.row{
+    margin-right: 0px!important;
+    margin-left: 0px!important;
+}
+
+/* alert page */
+
+.breadcrumb{
+    background-color: white!important;
+}
+
+.nav-pills .nav-link.active{
+    background-color: var(--form-button-color)!important;
+    color: white!important;
+}
+
+.sleep_alert_button{
+    background: rgba(0, 150, 150, 0.1)!important;
+    padding-top: 1px!important;
+    padding-right: 50px!important;
+    padding-bottom: 3px!important;
+    color: var(--alert-font-color)!important;
+}
+
+video{
+    border-radius: 4px!important;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+}
+
+.srch_btn{
+    background-color: var(--form-button-color);
+    border: 0px;
+    border-radius: 4px;
+    color: white;
+}
+
+.input_dte{
+    border: 0px;
+    background-color:rgba(0, 150, 150, 0.1)!important;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 6px 25px !important;
+    border-radius: 4px;
+}
+
+.pagination .active span{
+    background-color: var(--form-button-color)!important;
+    border-color: var(--form-button-color)!important;
+}
+
+.modal-open{
+    padding-right: 0px!important;
+}

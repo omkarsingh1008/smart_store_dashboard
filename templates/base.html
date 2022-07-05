@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>smart store</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .center {
+          text-align: center;
+        }
+        </style>
+</head>
+
+<body class="dashboard">
+    <div class="center">
+        <h6 class="mx-4 mt-5" style="font-size:32px;">autonomous checkout</h6>
+      </div>
+    
+
+<div class="mx-4 alert_border">
+    <h4 class="mx-3 mt-5" style="font-size:22px;">customers</h4>
+</div>
+
+<div class="dropdown d-flex justify-content-between">
+
+    <div class="d-flex ">
+        <!-- <button class=" mx-4 mt-3 dropdown-toggle all_button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            All
+        </button>
+
+        <div class="dropdown-menu dashboard_btn " aria-labelledby="dropdownMenuButton">
+            <option class="dropdown-item alert_status_filter" href="" value="All">All</option>
+            <option class="dropdown-item alert_status_filter" value='missing' href="">Missing alert</option>
+            <option class="dropdown-item alert_status_filter" value='sleep' href="">Sleep alert</option>
+        </div> -->
+    </div>
+
+    <form action="" method="POST">
+
+        <div class="d-flex align-self-center mx-4">
+           
+            <div>
+                <label for="">From:</label>
+                <input type="date" class="input_dte" name="from_date" id="from_date" value="{{fromdate}}">
+            </div>
+            <div>
+                <label for="">To:</label>
+                <input type="date" class="input_dte" name="to_date" id="to_date" value="{{todate}}">
+            </div>
+            <input type="submit" class="mx-3 srch_btn" value="Search" name="filter" id="filter"></input>
+        </div>
+
+    </form>
+
+</div>
+
+<div class="al">
+    {% for alert in content %}
+    <div class="user">
+    <a href="/chart.html">
+        {% if True %}
+        {% if "Sleep" == 'Sleep' %}
+        <div class="d-flex dashbord_btn mt-4 justify-content-between sleep">
+            {% else %}
+            <div class="d-flex dashbord_btn mt-4 justify-content-between missing">
+                {% endif %}
+
+                <!-- <div class="d-flex dashbord_btn mt-4 justify-content-between"> -->
+                {% else %}
+
+                {% if "Sleep" == 'Sleep' %}
+                <div class="d-flex dashbord_btn mt-4 dashboard_seen justify-content-between sleep">
+                    {% else %}
+                    <div class="d-flex dashbord_btn mt-4 dashboard_seen justify-content-between missing">
+                        {% endif %}
+                        <!-- <div class="d-flex dashbord_btn dashboard_seen mt-4 justify-content-between"> -->
+                        {% endif %}
+                        <div class="col-2 d-flex justify-content-around ">  
+                            <img src="static/images/images.png" alt="">
+                            <span class="align-self-center"> {{alert}}</span>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+    {% endfor %}
+</div>
+
+
+
+
+</body>
+
+</html>
